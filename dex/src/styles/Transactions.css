@@ -1,0 +1,87 @@
+.transactions-home {
+  padding: 0px 10px;
+  padding-bottom: 100px;
+}
+
+.transactions-table {
+  width: 80%; /* Змінено з max-width на width */
+  margin: auto;
+  background: linear-gradient(rgba(84, 3, 255, 0.15), rgba(105, 2, 153, 0.15));
+  border-radius: 15px;
+}
+
+.transactions-table-layout {
+  display: grid;
+  grid-template-columns: 0.5fr 2fr 1fr 1fr 1fr 1fr 1fr; /* Відкориговано для кращого розміщення */
+  padding: 15px 20px;
+  align-items: center;
+  border-bottom: 1px solid #3c3c3c;
+}
+
+.transactions-table-layout.header p {
+  font-weight: bold;
+  text-align: center; /* Center the header text */
+}
+
+.transactions-table-layout p {
+  text-align: center; /* Center the content text */
+}
+
+.transactions-table-layout p {
+  overflow: hidden; /* Обрізка довгого тексту */
+  white-space: nowrap; /* Запобігання переносу тексту */
+  text-overflow: ellipsis; /* Додавання трикрапки для довгого тексту */
+}
+
+.transactions-status {
+  text-align: center; /* Center the status content */
+}
+
+.transactions-status.success {
+  color: #00d515;
+}
+
+.transactions-status.pending {
+  color: #ffae00;
+}
+
+.transactions-status.failed {
+  color: #ff4646;
+}
+
+.transactions-table-layout:last-child {
+  border: none;
+}
+
+.pagination-container {
+  margin-top: 40px; /* Додайте бажаний відступ від таблиці */
+}
+
+.ant-pagination a {
+  color: white !important;
+  background-color: #7927ff !important; /* Змініть на потрібний вам колір */
+  border-color: red !important;
+  padding: 0px !important;
+  border-radius: 15%;
+}
+
+@media (max-width: 768px) {
+  .transactions-table {
+    width: 90%; /* Зменшення ширини для менших екранів */
+  }
+  .transactions-table-layout {
+    grid-template-columns: 0.5fr 2fr 1fr 1fr 1fr 1.5fr;
+  }
+  .transactions-status {
+    display: none;
+  }
+}
+
+@media (max-width: 500px) {
+  .transactions-table {
+    width: 95%; /* Зменшення ширини для найменших екранів */
+  }
+  .transactions-table-layout {
+    font-size: 13px;
+  }
+}
